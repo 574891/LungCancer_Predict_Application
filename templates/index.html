@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lung Cancer Prediction</title>
+</head>
+
+
+<body>
+ <div class="login">
+	<h1> Lung Cancer Prediction</h1>
+
+    <p>Fillout the following information to make prediction</p>
+    
+
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="fname">Enter your Age:</label>
+    	<input type="text" name="Age" placeholder="Age" value="30" /><p>
+    	<p>Rate the severity of the following conditions. (Use number 1 to 9 to represent the severity level of the corresponding condition, where 1 represent the lightest condition and 9 represent the worest condition)</p> 
+    	<label for="fap">Air Pollution: </label>
+        <input type="text" name="Air Pollution" placeholder="Air Pollution Level" required="required" /><br>
+        <label for="fau">Alcohol Use: </label>
+        <input type="text" name="Alcohol use" placeholder="Alcohol usage" required="required" /><br>
+        <label for="fDA">Dust Allergy: </label>
+        <input type="text" name="Dust Allergy" placeholder="Dust Allergy Level" required="required" /><br>
+        <label for="fGOP">OccuPational Hazards: </label>
+        <input type="text" name="OccuPational Hazards" placeholder="OccuPational Hazards" required="required" /><br>
+        <label for="fGene">Genetic Risk: </label>
+        <input type="text" name="Genetic Risk" placeholder="Genetic Risk" required="required" /><br>
+        <label for="fCLD">chronic Lung Disease: </label>
+        <input type="text" name="chronic Lung Disease" placeholder="chronic Lung Disease" required="required" /><br>
+        <label for="fBD">Balanced Diet: </label>
+        <input type="text" name="Balanced Diet" placeholder="Balanced Diet" required="required" /><br>
+        <label for="fO">Obesity: </label>
+        <input type="text" name="Obesity" placeholder="Obesity" required="required" /><br>
+        <label for="fS">Smoking: </label>
+        <input type="text" name="Smoking" placeholder="Smoking" required="required" /><br>
+        <label for="fPS">Passive Smoker: </label>
+        <input type="text" name="Passive Smoker" placeholder="Passive Smoker" required="required" /><br>
+        <label for="fCP">Chest Pain: </label>
+        <input type="text" name="Chest Pain" placeholder="Chest Pain" required="required" /><br>
+        <label for="fCOB">Coughing of Blood: </label>
+        <input type="text" name="Coughing of Blood" placeholder="Coughing of Blood" required="required" /><br>
+        <label for="fFAt">Fatigue: </label>
+        <input type="text" name="Fatigue" placeholder="Fatigue" required="required" /><br>
+        <label for="fwl">Weight Loss: </label>
+        <input type="text" name="Weight Loss" placeholder="Weight Loss" required="required" /><br>
+        <label for="fshort">Shortness of Breath: </label>
+        <input type="text" name="Shortness of Breath" placeholder="Shortness of Breath" required="required" /><br>
+        <label for="fwheez">Wheezing: </label>
+        <input type="text" name="Wheezing" placeholder="Wheezing" required="required" /><br>
+        <label for="fwallow">wallowing Difficulty: </label>
+        <input type="text" name="Swallowing Difficulty" placeholder="Swallowing Difficulty" required="required" /><br>
+        <label for="fclubb">Clubbing of Finger Nails: </label>
+        <input type="text" name="Clubbing of Finger Nails" placeholder="Clubbing of Finger Nails" required="required" /><br>
+        <label for="ffrequcold">Frequent Cold: </label>
+        <input type="text" name="Frequent Cold" placeholder="Frequent Cold" required="required" /><br>
+        <label for="fdrycou">Dry Cough: </label>
+        <input type="text" name="Dry Cough" placeholder="Dry Cough" required="required" /><br>
+        <label for="fsnoring">Snoring: </label>
+        <input type="text" name="Snoring" placeholder="Snoring" required="required" /><br>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Lung Caner Risk</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
